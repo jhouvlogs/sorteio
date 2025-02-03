@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorteio</h1>
+    <p>Clique no botão para sortear uma pessoa:</p>
+    <button class="button" onclick="sortearPessoa()">Sortear</button>
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Lista de pessoas
+        const pessoas = [
+            "Hadsson", "Igor", "Larima Izabela", "Daniela", "Mayra", "Milena", 
+            "Larima", "Barbara", "Sergio", "Andressa", "Luisa", "Diego", 
+            "Gilberto", "Lorena", "Gustavo", "Everton", "Daniel", "Felipe", "Leandro"
+        ];
+
+        // Função para sortear uma pessoa aleatória
+        function sortearPessoa() {
+            const pessoaEscolhida = pessoas[Math.floor(Math.random() * pessoas.length)];
+            document.getElementById("resultado").innerHTML = `A pessoa sorteada foi: ${pessoaEscolhida}`;
+        }
+    </script>
+</body>
+</html>
